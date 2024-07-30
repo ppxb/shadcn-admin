@@ -6,7 +6,7 @@ import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 
 import { ThemeProvider } from '~/components/custom/theme-provider'
-import i18next from '~/locale'
+import i18next from '~/locales'
 import router from '~/router'
 import '~/styles/index.css'
 

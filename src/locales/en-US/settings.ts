@@ -1,7 +1,7 @@
 export default {
   // Login
   'settings.login.title': 'Shadcn Admin',
-  'settings.login.tip': 'Login in below by OAuth',
+  'settings.login.tip': 'Login in below by OAuth or username',
   'settings.login.username.placeholder': 'Please enter username',
   'settings.login.password.placeholder': 'Please enter password',
   'settings.login.btn': 'Login',
