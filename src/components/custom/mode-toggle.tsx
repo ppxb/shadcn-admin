@@ -22,7 +22,7 @@ export function ModelToggle() {
           <span className="sr-only">Toggle Theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start">
+      <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme('light')}>
           Light
         </DropdownMenuItem>

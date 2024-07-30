@@ -7,13 +7,14 @@ export default antfu({
     }
   },
   typescript: true,
-  react: true
+  react: true,
 }, {
   rules: {
     'no-console': 'off',
 
     'react-refresh/only-export-components': 'off',
     'react/no-unstable-context-value': 'off',
+    'ts/no-use-before-define': 'off',
     'import/order': [
       2,
       {
