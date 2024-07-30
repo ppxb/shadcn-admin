@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 
-import Logo from '~/assets/react.svg'
 import { LanguageToggle } from '~/components/custom/language-toggle'
 import { ModelToggle } from '~/components/custom/mode-toggle'
 
@@ -10,15 +9,16 @@ export default function Login() {
   const { t } = useTranslation()
 
   return (
-    <div
-      className="container relative grid h-screen flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0"
-    >
+    <div className="container relative grid h-screen flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
       <div className="absolute right-4 top-4 flex gap-2 md:right-8 md:top-8">
         <LanguageToggle />
         <ModelToggle />
       </div>
       <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
-        <div className="absolute inset-0 bg-zinc-900" />
+        <div
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548525343-607329242f5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
+          className="bg-cover bg-center absolute inset-0"
+        />
         <div className="relative z-20 flex items-center text-lg font-medium">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,22 +35,14 @@ export default function Login() {
           Shadcn Admin
         </div>
 
-        <img
-          src={Logo}
-          className="relative m-auto"
-          width={301}
-          height={60}
-          alt="Vite"
-        />
-
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
-            <p className="text-lg">
+            <p className="text-2xl">
               &ldquo;This library has saved me countless hours of work and
               helped me deliver stunning designs to my clients faster than
               ever before.&rdquo;
             </p>
-            <footer className="text-sm">Sofia Davis</footer>
+            <footer className="text-base">Sofia Davis</footer>
           </blockquote>
         </div>
       </div>

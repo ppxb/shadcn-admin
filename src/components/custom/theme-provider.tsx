@@ -42,8 +42,6 @@ export function ThemeProvider({
         ? 'dark'
         : 'light'
 
-      console.log(systemTheme)
-
       return root.classList.add(systemTheme)
     }
 

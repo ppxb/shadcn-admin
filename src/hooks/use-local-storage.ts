@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 interface LocalstorageProps<T> {
   key: string
   defaultValue: T
+  keep?: boolean
 }
 
 export function useLocalStorage<T>({ key, defaultValue }: LocalstorageProps<T>) {
