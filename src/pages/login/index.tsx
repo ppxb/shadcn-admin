@@ -41,7 +41,7 @@ export default function Login() {
       <div className="xl:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-3xl font-bold">龙泉驿区会议管理系统</h1>
+            <h1 className="text-4xl font-bold">Shadcn Admin</h1>
             <p className="text-sm text-muted-foreground">
               {t('settings.login.subtitle')}
             </p>
