@@ -18,18 +18,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const { t } = useTranslation()
 
   const formSchema = z.object({
-    username: z.string().min(4, {
+    username: z.string().min(1, {
       message: t('settings.login.username.placeholder')
+    }).min(4, {
+      message: t('settings.login.username.invalid')
     }),
     password: z.string().min(1, {
       message: t('settings.login.password.placeholder')
+    }).min(6, {
+      message: t('settings.login.password.invalid')
     })
   })
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: 'admin',
-      password: '123456'
+      username: '',
+      password: ''
     }
   })
   const [isLoading, setIsLoading] = useState(false)

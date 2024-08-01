@@ -10,12 +10,12 @@ export default function Login() {
   const { t } = useTranslation()
 
   return (
-    <div className="container relative grid h-screen flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0">
+    <div className="container relative grid h-screen flex-col items-center justify-center xl:max-w-none xl:grid-cols-2 xl:px-0">
       <div className="absolute right-4 top-4 flex gap-2 md:right-8 md:top-8">
         <LanguageToggle />
         <ModelToggle />
       </div>
-      <div className="relative hidden h-full flex-col p-20 rounded-[4rem] text-white lg:flex">
+      <div className="relative hidden h-full flex-col p-20 rounded-[4rem] text-white xl:flex">
         <div
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548525343-607329242f5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
           className="rounded-[4rem] bg-cover bg-center absolute inset-10"
@@ -36,10 +36,10 @@ export default function Login() {
           </blockquote>
         </div>
       </div>
-      <div className="lg:p-8">
+      <div className="xl:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-4xl font-bold">{t('settings.login.title')}</h1>
+            <h1 className="text-4xl font-bold">Shadcn Admin</h1>
             <p className="text-sm text-muted-foreground">
               {t('settings.login.subtitle')}
             </p>
