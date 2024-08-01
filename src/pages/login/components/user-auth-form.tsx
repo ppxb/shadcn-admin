@@ -10,12 +10,14 @@ import { PasswordInput } from '~/components/custom/password-input'
 import { Button } from '~/components/ui/button'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form'
 import { Input } from '~/components/ui/input'
+import { useToast } from '~/components/ui/use-toast'
 import { cn } from '~/lib/utils'
 
 interface UserAuthFormProps extends HTMLAttributes<HTMLDivElement> {}
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const { t } = useTranslation()
+  const { toast } = useToast()
 
   const formSchema = z.object({
     username: z.string().min(1, {
@@ -32,14 +34,18 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: '',
-      password: ''
+      username: 'admin',
+      password: '123456'
     }
   })
   const [isLoading, setIsLoading] = useState(false)
 
   const onSubmit = async (params: z.infer<typeof formSchema>) => {
     setIsLoading(true)
+    toast({
+      title: 'Scheduled: Catch up',
+      description: 'Friday, February 10, 2023 at 5:57 PM',
+    })
   }
 
   return (

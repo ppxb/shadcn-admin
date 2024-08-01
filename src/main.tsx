@@ -6,6 +6,7 @@ import { I18nextProvider } from 'react-i18next'
 import { RouterProvider } from 'react-router-dom'
 
 import { ThemeProvider } from '~/components/custom/theme-provider'
+import { Toaster } from '~/components/ui/toaster'
 import i18next from '~/locales'
 import router from '~/router'
 import '~/styles/index.css'
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <I18nextProvider i18n={i18next} defaultNS="translation">
       <ThemeProvider defaultTheme="system" storageKey="shadcn-admin-theme">
         <RouterProvider router={router} fallbackElement={<Loading />} />
+        <Toaster />
       </ThemeProvider>
     </I18nextProvider>
   </React.StrictMode>,
