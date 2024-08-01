@@ -5,9 +5,9 @@ import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { z } from 'zod'
 
+import { Icons } from '~/components/custom/icons'
 import { PasswordInput } from '~/components/custom/password-input'
 import { Button } from '~/components/ui/button'
-
 import { Form, FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form'
 import { Input } from '~/components/ui/input'
 import { cn } from '~/lib/utils'
@@ -35,25 +35,27 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = useState(false)
 
   const onSubmit = async (params: z.infer<typeof formSchema>) => {
-
+    setIsLoading(true)
   }
 
   return (
     <div className={cn('grid gap-6', className)} {...props}>
-      <div className="flex gap-2">
+      <div className="grid grid-cols-2 gap-6">
         <Button
           variant="outline"
-          className="w-full"
           type="button"
+          disabled={isLoading}
+          preSlot={<Icons.wechat className="h-5 w-5 text-green-500" />}
         >
-          Github
+          {t('settings.brand.wechat')}
         </Button>
         <Button
           variant="outline"
-          className="w-full"
           type="button"
+          disabled={isLoading}
+          preSlot={<Icons.google className="h-4 w-4" />}
         >
-          WeChat
+          {t('settings.brand.google')}
         </Button>
       </div>
       <div className="relative">
@@ -94,7 +96,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                 </FormItem>
               )}
             />
-            <Button>
+            <Button loading={isLoading}>
               {t('settings.login.btn')}
             </Button>
           </div>

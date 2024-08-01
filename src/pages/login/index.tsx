@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 
+import { Icons } from '~/components/custom/icons'
 import { LanguageToggle } from '~/components/custom/language-toggle'
 import { ModelToggle } from '~/components/custom/mode-toggle'
 
@@ -14,24 +15,13 @@ export default function Login() {
         <LanguageToggle />
         <ModelToggle />
       </div>
-      <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
+      <div className="relative hidden h-full flex-col p-20 rounded-[4rem] text-white lg:flex">
         <div
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548525343-607329242f5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
-          className="bg-cover bg-center absolute inset-0"
+          className="rounded-[4rem] bg-cover bg-center absolute inset-10"
         />
-        <div className="relative z-20 flex items-center text-lg font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="mr-2 h-6 w-6"
-          >
-            <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
-          </svg>
+        <div className="relative z-20 flex gap-4 items-center text-lg font-bold">
+          <Icons.logo className="h-6 w-6" />
           Shadcn Admin
         </div>
 
@@ -47,33 +37,32 @@ export default function Login() {
         </div>
       </div>
       <div className="lg:p-8">
-        <div className="mx-auto flex w-full flex-col justify-center space-y-4 sm:w-[350px]">
-          <div className="flex flex-col space-y-4">
+        <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
+          <div className="flex flex-col space-y-2">
             <h1 className="text-4xl font-bold">{t('settings.login.title')}</h1>
             <p className="text-sm text-muted-foreground">
-              {t('settings.login.tip')}
+              {t('settings.login.subtitle')}
             </p>
           </div>
           <UserAuthForm />
-          <p className="px-8 text-center text-sm text-muted-foreground">
-            By clicking login, you agree to our
+          <p className="text-center text-sm text-muted-foreground">
+            {t('settings.login.tips')}
             {' '}
             <a
               href="/terms"
               className="underline underline-offset-4 hover:text-primary"
             >
-              Terms of Service
+              {t('settings.login.terms')}
             </a>
             {' '}
-            and
+            {t('settings.login.and')}
             {' '}
             <a
               href="/privacy"
               className="underline underline-offset-4 hover:text-primary"
             >
-              Privacy Policy
+              {t('settings.login.privacy')}
             </a>
-            .
           </p>
         </div>
       </div>
