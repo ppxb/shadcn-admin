@@ -15,9 +15,9 @@ export default function Login() {
         <LanguageToggle />
         <ModelToggle />
       </div>
-      <div className="relative hidden h-full flex-col p-20 rounded-[4rem] text-white xl:flex">
+      <div className="relative hidden h-full flex-col py-20 px-24 rounded-[4rem] text-white xl:flex">
         <div
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1548525343-607329242f5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
+          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)' }}
           className="rounded-[4rem] bg-cover bg-center absolute inset-10"
         />
         <div className="relative z-20 flex gap-4 items-center text-lg font-bold">
@@ -26,20 +26,22 @@ export default function Login() {
         </div>
 
         <div className="relative z-20 mt-auto">
-          <blockquote className="space-y-2">
-            <p className="text-2xl">
-              &ldquo;This library has saved me countless hours of work and
-              helped me deliver stunning designs to my clients faster than
-              ever before.&rdquo;
+          <div className="space-y-4">
+            <p className="text-5xl font-bold">
+              Start turnning your ideas into reality.
             </p>
-            <footer className="text-base">Sofia Davis</footer>
-          </blockquote>
+            <div className="flex items-center gap-1 py-0.5 px-2.5 w-fit bg-white/20 backdrop-blur rounded-xl">
+              <div className="text-sm">Intelligent management system</div>
+              <Icons.arrorRight className="h-4 w-4" />
+            </div>
+            <footer className="text-base">Easily manage your projects and assets, and connect to your financial systems. Make all your workflows easy.</footer>
+          </div>
         </div>
       </div>
       <div className="xl:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-8 sm:w-[350px]">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-4xl font-bold">Shadcn Admin</h1>
+            <h1 className="text-3xl font-bold">龙泉驿区会议管理系统</h1>
             <p className="text-sm text-muted-foreground">
               {t('settings.login.subtitle')}
             </p>
