@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 
 import { Icons } from '~/components/custom/icons'
 import { LanguageToggle } from '~/components/custom/language-toggle'
-import { ModelToggle } from '~/components/custom/mode-toggle'
+import { ModeToggle } from '~/components/custom/mode-toggle'
 
 import { UserAuthForm } from './components/user-auth-form'
 
@@ -13,7 +13,7 @@ export default function Login() {
     <div className="container relative grid h-screen flex-col items-center justify-center xl:max-w-none xl:grid-cols-2 xl:px-0">
       <div className="absolute right-4 top-4 flex gap-2 md:right-8 md:top-8">
         <LanguageToggle />
-        <ModelToggle />
+        <ModeToggle />
       </div>
       <div className="relative hidden h-full flex-col py-20 px-24 rounded-[4rem] text-white xl:flex">
         <div
