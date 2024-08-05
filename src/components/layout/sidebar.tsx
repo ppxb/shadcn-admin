@@ -5,11 +5,9 @@ import { useEffect, useState } from 'react'
 import { Button } from '~/components/ui/button'
 import { cn } from '~/lib/utils'
 
-import { Icons } from '../custom/icons'
-
 import Menu from './menu'
 import { sideLinks } from './sidelink'
-import { Layout, LayoutHeader } from './wrapper'
+import { Layout } from './wrapper'
 
 interface LayoutSidebarProps extends HTMLAttributes<HTMLElement> {
   isCollapsed: boolean
@@ -31,26 +29,17 @@ export default function LayoutSidebar({ className, isCollapsed, setIsCollapsed }
   return (
     <aside
       className={cn(
-              `fixed left-0 right-0 top-0 z-50 w-full border-r transition-[width] scrollbar-hide md:bottom-0 md:right-auto md:h-svh ${isCollapsed ? 'md:w-16' : 'md:w-72'}`,
+              `fixed left-0 right-0 top-16 z-50 w-full border-r transition-[width] scrollbar-hide md:bottom-0 md:right-auto md:h-svh ${isCollapsed ? 'md:w-16' : 'md:w-72'}`,
               className
       )}
     >
       {/* Mobile Overlay */}
       <div
         onClick={() => setNavOpened(false)}
-        className={`absolute inset-0 transition-[opacity] delay-100 duration-300 ${navOpened ? 'h-svh opacity-100' : 'h-0 opacity-0'} w-full bg-white/30 backdrop-blur md:hidden`}
+        className={`absolute inset-0 transition-[opacity] delay-100 duration-300 ${navOpened ? 'h-svh opacity-100' : 'h-0 opacity-0'} w-full bg-background/30 backdrop-blur md:hidden`}
       />
       <Layout>
-        <LayoutHeader className="sticky justify-between top-0 p-4 md:px-5">
-          <div className="flex items-center gap-2">
-            <Icons.logo className="h-6 w-6" />
-            <div
-              className={`font-bold text-xl truncate ${isCollapsed ? 'invisible w-0' : 'visible w-auto'}`}
-            >
-              Shadcn Admin
-            </div>
-          </div>
-
+        <div className="flex justify-end py-2 px-4 md:hidden">
           {/* Toggle Button in mobile */}
           <Button
             variant="ghost"
@@ -60,7 +49,7 @@ export default function LayoutSidebar({ className, isCollapsed, setIsCollapsed }
           >
             {navOpened ? <X /> : <AlignJustify />}
           </Button>
-        </LayoutHeader>
+        </div>
 
         <Menu
           className={`h-full flex-1 overflow-auto scrollbar-hide ${navOpened ? 'max-h-screen' : 'max-h-0 py-0 md:max-h-screen md:py-2'}`}
