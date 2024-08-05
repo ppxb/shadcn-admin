@@ -15,7 +15,7 @@ export default function Layout() {
   return (
     <div className="relative h-svh bg-gray-50 overflow-hidden dark:bg-black">
       <div className="relative w-full h-16 overflow-hidden">
-        <LayoutHeader className="fixed w-full h-16 z-10 border-b md:top-0 md:pr-8 right-0 sm:top-20 bg-background">
+        <LayoutHeader className="fixed w-full h-16 z-10 border-b md:top-0 md:p-8 right-0 sm:top-20 bg-background">
           <div className="flex items-center gap-2">
             <Icons.logo className="h-6 w-6" />
             <div
