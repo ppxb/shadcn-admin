@@ -46,24 +46,4 @@ const LayoutHeader = React.forwardRef<
 
 LayoutHeader.displayName = 'LayoutHeader'
 
-interface LayoutBodyProps extends React.HTMLAttributes<HTMLDivElement> {
-  fixedHeight?: boolean
-}
-
-const LayoutBody = React.forwardRef<HTMLDivElement, LayoutBodyProps>(
-  ({ className, fixedHeight, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cn(
-        'flex-1 overflow-hidden p-4 md:px-4',
-        fixedHeight && 'h-[calc(100svh-64px)]',
-        className
-      )}
-      {...props}
-    />
-  )
-)
-
-LayoutBody.displayName = 'LayoutBody'
-
-export { Layout, LayoutHeader, LayoutBody }
+export { Layout, LayoutHeader }

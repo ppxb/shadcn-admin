@@ -29,7 +29,7 @@ export default function LayoutSidebar({ className, isCollapsed, setIsCollapsed }
   return (
     <aside
       className={cn(
-              `fixed left-0 right-0 top-16 z-50 w-full border-r transition-[width] scrollbar-hide md:bottom-0 md:right-auto md:h-svh ${isCollapsed ? 'md:w-16' : 'md:w-72'}`,
+              `fixed left-0 right-0 top-16 z-50 w-full transition-[width] scrollbar-hide md:rounded-2xl md:border md:left-4 md:top-24 md:bottom-4 ${isCollapsed ? 'md:w-16' : 'md:w-72'} bg-gray-50 dark:bg-black`,
               className
       )}
     >

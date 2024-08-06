@@ -7,15 +7,15 @@ import { UserNav } from '~/components/layout/user-nav'
 import useCollapsed from '~/hooks/use-collapsed'
 
 import LayoutSidebar from './sidebar'
-import { LayoutBody, LayoutHeader } from './wrapper'
+import { LayoutHeader } from './wrapper'
 
 export default function Layout() {
   const [isCollapsed, setIsCollapsed] = useCollapsed()
 
   return (
-    <div className="relative h-svh bg-gray-50 overflow-hidden dark:bg-black">
+    <div className="relative h-svh overflow-hidden">
       <div className="relative w-full h-16 overflow-hidden">
-        <LayoutHeader className="fixed w-full h-16 z-10 border-b md:top-0 md:p-8 right-0 sm:top-20 bg-background">
+        <LayoutHeader className="fixed w-full h-16 z-50 border-b md:w-auto md:rounded-2xl md:border md:inset-4 md:p-8 bg-gray-50 dark:bg-black">
           <div className="flex items-center gap-2">
             <Icons.logo className="h-6 w-6" />
             <div
@@ -31,13 +31,9 @@ export default function Layout() {
           </div>
         </LayoutHeader>
       </div>
-      <LayoutSidebar className="bg-background" isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
-      <main className="h-full overflow-x-hidden pt-16 md:overflow-y-hidden md:pt-0">
-        <LayoutBody className="flex flex-col">
-          <div className="flex-1 pl-0 lg:flex-row space-y-5 md:pl-80 md:w-10/12 lg:w-10/12">
-            <Outlet />
-          </div>
-        </LayoutBody>
+      <LayoutSidebar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+      <main className={`h-svh flex flex-col transition-[width] p-[64px_24px_24px_24px] bg-background ${isCollapsed ? 'md:p-[32px_24px_24px_104px]' : 'md:p-[32px_24px_24px_328px]'}`}>
+        <Outlet />
       </main>
     </div>
   )
