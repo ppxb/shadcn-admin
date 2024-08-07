@@ -4,6 +4,15 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import Layout from '~/components/layout'
 
+const exceptionRoutes: RouteObject[] = [
+  {
+    path: '*',
+    lazy: async () => ({
+      Component: (await import('~/pages/404')).default
+    })
+  }
+]
+
 const staticRoutes: RouteObject[] = [
   {
     path: '/login',
@@ -21,7 +30,8 @@ const staticRoutes: RouteObject[] = [
         lazy: async () => ({
           Component: (await import('~/pages/dashboard')).default
         })
-      }
+      },
+      ...exceptionRoutes
     ]
   }
 ]

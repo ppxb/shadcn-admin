@@ -88,8 +88,8 @@ function MenuLinkItem({
           variant: checkIsActive(href) ? 'secondary' : 'ghost',
           size: 'default',
         }),
-        'h-12 justify-start text-wrap secondary shadow-none px-6 mx-2',
-        subLink && 'h-12 w-full mx-0 pl-8'
+        'h-12 justify-start secondary shadow-none px-6 mx-2',
+        subLink && 'h-12 w-full mx-0 pl-12'
       )}
       aria-current={checkIsActive(href) ? 'page' : undefined}
     >
@@ -114,7 +114,7 @@ function MenuLinkDropdown({ title, href, icon, label, sub, closeMenu }: MenuLink
     <Collapsible defaultOpen={isChildActive} className="mx-2">
       <CollapsibleTrigger className={cn(
         buttonVariants({ variant: 'ghost', size: 'default' }),
-        'group h-12 w-full text-wrap justify-start secondary shadow-none pl-6'
+        'group h-12 w-full justify-start secondary shadow-none pl-6'
       )}
       >
         <div className="mr-2">{icon}</div>
@@ -171,7 +171,7 @@ function MenuLinkIcon({ title, icon, label, href }: MenuLinkProps) {
           <span className="sr-only">{t(title)}</span>
         </Link>
       </TooltipTrigger>
-      <TooltipContent side="right" className="flex items-center gap-4">
+      <TooltipContent side="right" sideOffset={8} className="flex items-center gap-4">
         {t(title)}
         {label && (
           <span className="ml-auto text-muted-foreground">{label}</span>
@@ -201,19 +201,17 @@ function MenuLinkIconDropdown({ title, href, icon, label, sub }: MenuLinkProps) 
             </Button>
           </DropdownMenuTrigger>
         </TooltipTrigger>
-        <TooltipContent side="right" sideOffset={12} className="flex items-center gap-4">
+        <TooltipContent side="right" sideOffset={8} className="flex items-center gap-4">
           {t(title)}
           {' '}
           {
             label && <span className="ml-auto text-muted-foreground">{label}</span>
           }
-          <ChevronRight size={16} />
         </TooltipContent>
       </Tooltip>
-      <DropdownMenuContent side="right" align="start" sideOffset={12}>
+      <DropdownMenuContent side="right" align="start" sideOffset={8}>
         <DropdownMenuLabel>
           {t(title)}
-          {' '}
           {label ? `(${label})` : ''}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />

@@ -15,4 +15,8 @@ export default {
   // Brand
   'settings.brand.wechat': 'WeChat',
   'settings.brand.google': 'Google',
+
+  // Exception
+  'settings.exception.404': 'This page could not found',
+  'settings.exception.back': 'Go back home',
 }

@@ -1,23 +1,13 @@
 import {
-  Blocks,
-  BookUser,
-  Contact,
-  Dock,
-  Feather,
-  FileCog,
-  Images,
+  BookA,
+  Fingerprint,
   Layers3,
   LayoutDashboard,
-  Ribbon,
-  ScanEye,
+  ListTree,
+  Presentation,
+  ScrollText,
   Settings,
-  Shirt,
-  ShoppingBag,
-  ShoppingBasket,
-  SquareLibrary,
-  Ticket,
-  TicketCheck,
-  ToyBrick,
+  SquareMenu,
   Users
 } from 'lucide-react'
 
@@ -34,142 +24,154 @@ export interface SideLink extends MenuLink {
 
 export const sideLinks: SideLink[] = [
   {
-    title: 'menu.dashboard',
+    title: 'menus.dashboard',
     label: '',
     href: '/',
     icon: <LayoutDashboard size={18} />,
   },
   {
-    title: 'menu.product',
-    label: '3',
-    href: '/products',
-    icon: <Shirt size={18} />,
+    title: 'menus.mettings',
+    label: '',
+    href: '/mettings',
+    icon: <Presentation size={18} />,
     sub: [
       {
-        title: 'menu.product.list',
+        title: 'menus.mettings.list',
         label: '',
         href: '/index',
-        icon: <Blocks size={18} />,
-      },
-      {
-        title: 'menu.cate.list',
-        label: '1',
-        href: '/cates',
         icon: <Layers3 size={18} />,
       },
-      {
-        title: 'menu.brand.list',
-        label: '',
-        href: '/brands',
-        icon: <Ribbon size={18} />,
-      },
-      {
-        title: 'menu.attrs.list',
-        label: '',
-        href: '/attrs',
-        icon: <Feather size={18} />,
-      },
     ]
   },
   {
-    title: 'menu.order',
-    label: '',
-    href: '/orders',
-    icon: <ShoppingBag size={18} />,
-    sub: [
-      {
-        title: 'menu.order.list',
-        label: '',
-        href: '/index',
-        icon: <ShoppingBasket size={18} />,
-      },
-    ],
-  },
-  {
-    title: 'menu.invoice',
-    label: '',
-    href: '/invoices',
-    icon: <Ticket size={18} />,
-    sub: [
-      {
-        title: 'menu.invoice.list',
-        label: '',
-        href: '/index',
-        icon: <TicketCheck size={18} />,
-      },
-    ],
-  },
-  {
-    title: 'menu.user',
-    label: '',
-    href: '/users',
-    icon: <Users size={18} />,
-    sub: [
-      {
-        title: 'menu.user.list',
-        label: '',
-        href: '/index',
-        icon: <BookUser size={18} />,
-      },
-    ],
-  },
-  {
-    title: 'menu.system.permission',
-    label: '',
-    href: '/permissions',
-    icon: <ScanEye size={18} />,
-    sub: [
-      {
-        title: 'menu.system.permission.member',
-        label: '',
-        href: '/member',
-        icon: <Contact size={18} />,
-      },
-      {
-        title: 'menu.system.permission.role',
-        label: '',
-        href: '/role',
-        icon: <SquareLibrary size={18} />,
-      },
-      {
-        title: 'menu.system.permission.resource',
-        label: '',
-        href: '/resource',
-        icon: <Dock size={18} />,
-      },
-    ]
-  },
-  {
-    title: 'menu.system.settings',
+    title: 'menus.settings',
     label: '',
     href: '/settings',
     icon: <Settings size={18} />,
     sub: [
       {
-        title: 'menu.system.settings.attach',
+        title: 'menus.settings.users',
         label: '',
-        href: '/attachment',
-        icon: <FileCog size={18} />,
+        href: '/users',
+        icon: <Users size={18} />,
       },
       {
-        title: 'menu.system.settings.banner',
+        title: 'menus.settings.roles',
         label: '',
-        href: '/banner',
-        icon: <Images size={18} />,
+        href: '/roles',
+        icon: <Fingerprint size={18} />,
+      },
+      {
+        title: 'menus.settings.depts',
+        label: '',
+        href: '/depts',
+        icon: <ListTree size={18} />,
+      },
+      {
+        title: 'menus.settings.menus',
+        label: '',
+        href: '/menus',
+        icon: <SquareMenu size={18} />,
+      },
+      {
+        title: 'menus.settings.dicts',
+        label: '',
+        href: '/dicts',
+        icon: <BookA size={18} />,
+      },
+      {
+        title: 'menus.settings.logs',
+        label: '',
+        href: '/logs',
+        icon: <ScrollText size={18} />,
       },
     ]
   },
   {
-    title: 'menu.system.plugin',
+    title: 'menus.settings',
     label: '',
-    href: '/plugins',
-    icon: <Blocks size={18} />,
+    href: '/settings',
+    icon: <Settings size={18} />,
     sub: [
       {
-        title: 'menu.system.plugin.list',
+        title: 'menus.settings.users',
         label: '',
-        href: '/index',
-        icon: <ToyBrick size={18} />,
+        href: '/users',
+        icon: <Users size={18} />,
+      },
+      {
+        title: 'menus.settings.roles',
+        label: '',
+        href: '/roles',
+        icon: <Fingerprint size={18} />,
+      },
+      {
+        title: 'menus.settings.depts',
+        label: '',
+        href: '/depts',
+        icon: <ListTree size={18} />,
+      },
+      {
+        title: 'menus.settings.menus',
+        label: '',
+        href: '/menus',
+        icon: <SquareMenu size={18} />,
+      },
+      {
+        title: 'menus.settings.dicts',
+        label: '',
+        href: '/dicts',
+        icon: <BookA size={18} />,
+      },
+      {
+        title: 'menus.settings.logs',
+        label: '',
+        href: '/logs',
+        icon: <ScrollText size={18} />,
+      },
+    ]
+  },
+  {
+    title: 'menus.settings',
+    label: '',
+    href: '/settings',
+    icon: <Settings size={18} />,
+    sub: [
+      {
+        title: 'menus.settings.users',
+        label: '',
+        href: '/users',
+        icon: <Users size={18} />,
+      },
+      {
+        title: 'menus.settings.roles',
+        label: '',
+        href: '/roles',
+        icon: <Fingerprint size={18} />,
+      },
+      {
+        title: 'menus.settings.depts',
+        label: '',
+        href: '/depts',
+        icon: <ListTree size={18} />,
+      },
+      {
+        title: 'menus.settings.menus',
+        label: '',
+        href: '/menus',
+        icon: <SquareMenu size={18} />,
+      },
+      {
+        title: 'menus.settings.dicts',
+        label: '',
+        href: '/dicts',
+        icon: <BookA size={18} />,
+      },
+      {
+        title: 'menus.settings.logs',
+        label: '',
+        href: '/logs',
+        icon: <ScrollText size={18} />,
       },
     ]
   },

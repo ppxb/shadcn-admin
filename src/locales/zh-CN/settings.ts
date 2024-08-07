@@ -15,4 +15,7 @@ export default {
   // Brand
   'settings.brand.wechat': '微信',
   'settings.brand.google': 'Google',
+
+  'settings.exception.404': '该页面不存在',
+  'settings.exception.back': '返回首页',
 }
