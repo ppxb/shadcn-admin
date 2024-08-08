@@ -1,5 +1,3 @@
-import { Copy } from 'lucide-react'
-
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuShortcut, DropdownMenuTrigger } from '~/components/ui/dropdown-menu'
 
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
@@ -9,19 +7,16 @@ export function UserNav() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Avatar className="h-8 w-8 hover:cursor-pointer">
-          <AvatarImage src="https://xsgames.co/randomusers/avatar.php?g=female" alt="user" />
+          <AvatarImage src="https://ui.shadcn.com/avatars/03.png" alt="user" />
           <AvatarFallback className="text-sm">SN</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56" align="end" forceMount>
         <DropdownMenuLabel className="font-normal">
           <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">未知</p>
-            <p className="text-xs leading-none text-muted-foreground flex items-center">
-              <span>
-                uuid:
-              </span>
-              <Copy size={12} className="ml-1 cursor-pointer" />
+            <p className="text-sm font-medium leading-none">连辰</p>
+            <p className="text-xs leading-none text-muted-foreground">
+              区政府办/行政科
             </p>
           </div>
         </DropdownMenuLabel>

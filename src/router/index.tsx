@@ -3,6 +3,7 @@ import type { RouteObject } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 
 import Layout from '~/components/layout'
+import ExceptionPage from '~/pages/404'
 
 const exceptionRoutes: RouteObject[] = [
   {
@@ -12,6 +13,21 @@ const exceptionRoutes: RouteObject[] = [
     })
   }
 ]
+
+const meetingsRoutes: RouteObject = {
+  path: '/meetings',
+  element: <Layout />,
+  errorElement: <ExceptionPage />,
+  children: [
+    {
+      index: true,
+      path: 'list',
+      lazy: async () => ({
+        Component: (await import('~/pages/meetings/list')).default
+      })
+    }
+  ]
+}
 
 const staticRoutes: RouteObject[] = [
   {
@@ -23,6 +39,7 @@ const staticRoutes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
+    errorElement: <ExceptionPage />,
     children: [
       {
         index: true,
@@ -33,7 +50,8 @@ const staticRoutes: RouteObject[] = [
       },
       ...exceptionRoutes
     ]
-  }
+  },
+  meetingsRoutes
 ]
 
 const router: Router = createBrowserRouter(staticRoutes)

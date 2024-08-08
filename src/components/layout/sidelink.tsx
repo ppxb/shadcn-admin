@@ -32,102 +32,14 @@ export const sideLinks: SideLink[] = [
   {
     title: 'menus.mettings',
     label: '',
-    href: '/mettings',
+    href: '/meetings',
     icon: <Presentation size={18} />,
     sub: [
       {
         title: 'menus.mettings.list',
         label: '',
-        href: '/index',
+        href: '/list',
         icon: <Layers3 size={18} />,
-      },
-    ]
-  },
-  {
-    title: 'menus.settings',
-    label: '',
-    href: '/settings',
-    icon: <Settings size={18} />,
-    sub: [
-      {
-        title: 'menus.settings.users',
-        label: '',
-        href: '/users',
-        icon: <Users size={18} />,
-      },
-      {
-        title: 'menus.settings.roles',
-        label: '',
-        href: '/roles',
-        icon: <Fingerprint size={18} />,
-      },
-      {
-        title: 'menus.settings.depts',
-        label: '',
-        href: '/depts',
-        icon: <ListTree size={18} />,
-      },
-      {
-        title: 'menus.settings.menus',
-        label: '',
-        href: '/menus',
-        icon: <SquareMenu size={18} />,
-      },
-      {
-        title: 'menus.settings.dicts',
-        label: '',
-        href: '/dicts',
-        icon: <BookA size={18} />,
-      },
-      {
-        title: 'menus.settings.logs',
-        label: '',
-        href: '/logs',
-        icon: <ScrollText size={18} />,
-      },
-    ]
-  },
-  {
-    title: 'menus.settings',
-    label: '',
-    href: '/settings',
-    icon: <Settings size={18} />,
-    sub: [
-      {
-        title: 'menus.settings.users',
-        label: '',
-        href: '/users',
-        icon: <Users size={18} />,
-      },
-      {
-        title: 'menus.settings.roles',
-        label: '',
-        href: '/roles',
-        icon: <Fingerprint size={18} />,
-      },
-      {
-        title: 'menus.settings.depts',
-        label: '',
-        href: '/depts',
-        icon: <ListTree size={18} />,
-      },
-      {
-        title: 'menus.settings.menus',
-        label: '',
-        href: '/menus',
-        icon: <SquareMenu size={18} />,
-      },
-      {
-        title: 'menus.settings.dicts',
-        label: '',
-        href: '/dicts',
-        icon: <BookA size={18} />,
-      },
-      {
-        title: 'menus.settings.logs',
-        label: '',
-        href: '/logs',
-        icon: <ScrollText size={18} />,
       },
     ]
   },
